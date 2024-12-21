@@ -1,0 +1,18 @@
+services:
+  flask-app:
+    build: .
+    container_name: practica-flask
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app
+    environment:
+      FLASK_ENV: development
+      DATABASE_URI: ${DATABASE_URI}
+      SECRET_KEY: mi-secreto-super-seguro
+
+
+
+
