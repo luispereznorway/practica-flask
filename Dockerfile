@@ -9,7 +9,7 @@ COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia el código fuente
-COPY app/ /app/
+COPY . .
 
 # Expone el puerto 5000
 EXPOSE 5000
